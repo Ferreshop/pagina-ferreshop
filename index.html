@@ -287,40 +287,41 @@
     <!-- ================= SCRIPT DE INTERACTIVIDAD ================= -->
     <!-- ================= SCRIPT DE INTERACTIVIDAD ================= -->
     <!-- ================= SCRIPT DE INTERACTIVIDAD ================= -->
+    <!-- ================= SCRIPT DE INTERACTIVIDAD ================= -->
     <script>
-        // 1. Inventario actualizado con la columna de "existencia" extraída de tu Excel
+        // 1. Inventario corregido y limpio
         const inventario = [
-    { id: '7506610212411', nombre: 'Cámara Wifi Robotizada Tipo Domo 3mp, VOLTECK', departamento: 'FERRETERIA', precio: 845.0, existencia: 2, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },' },
-    { id: '7506240621560', nombre: 'SENSOR DE MOVIMIENTO CON ALARMA Y TIMBRE VOLTECK', departamento: 'FERRETERIA', precio: 219.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C157816', nombre: 'Curp', departamento: 'FERRETERIA', precio: 10.0, existencia: 19, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7503026359532', nombre: 'Regulador de Voltaje Qian 1000VA Automático con 5 Contactos NEMA para PC y Electrónicos EN1000', departamento: 'TECNOLOGIA', precio: 430.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7500619016315', nombre: 'Lector de Código de Barras Tiaoma Alámbrico', departamento: 'TECNOLOGIA', precio: 430.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7500462624637', nombre: 'impresora termica de tickets 58mm', departamento: 'TECNOLOGIA', precio: 673.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '6973008800016', nombre: 'Dedales para telefono', departamento: 'TECNOLOGIA', precio: 25.0, existencia: 30, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502307717641', nombre: 'Marcador para pizarron varios colores DOBLE PUNTA', departamento: 'PAPELERIA', precio: 13.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '602760004580', nombre: 'CUADERNO PROFESIONAL  RAYA STAR KID ESTRELLA 100H', departamento: 'PAPELERIA', precio: 22.0, existencia: 36, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C159105', nombre: 'Lamina Alfabeto', departamento: 'PAPELERIA', precio: 50.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502008431488', nombre: 'Silicon en barra  Devek delgada PIEZA', departamento: 'PAPELERIA', precio: 3.0, existencia: 98, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502307713377', nombre: 'Broche para archivo jumbo PIEZA', departamento: 'PAPELERIA', precio: 1.5, existencia: 100, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502005161234', nombre: 'Cúter Retráctil Grueso Uso Pesado con Guía', departamento: 'PAPELERIA', precio: 40.0, existencia: 10, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502005161210', nombre: 'Cúter Retráctil Delgado de Plástico para uso Ligero sin Guía', departamento: 'PAPELERIA', precio: 11.0, existencia: 9, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7501214965398', nombre: 'Tijera Escolar Punta Roma Delta Mod. AL100', departamento: 'PAPELERIA', precio: 14.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7501987591732', nombre: 'Tijera escolar punta roma TIJ-ES001', departamento: 'PAPELERIA', precio: 15.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7501711437329', nombre: 'Crayones Escrimex Jumbo C/12 PZAS', departamento: 'PAPELERIA', precio: 25.0, existencia: 6, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C174000', nombre: 'Acta de nacimiento', departamento: 'PAPELERIA', precio: 100.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C191855', nombre: 'RFC', departamento: 'PAPELERIA', precio: 180.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C137770', nombre: 'Numero de Seguro Social', departamento: 'PAPELERIA', precio: 50.0, existencia: 19, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C163909', nombre: 'Constancia de no derecho inhabilitacion imss', departamento: 'PAPELERIA', precio: 140.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'D1C123966', nombre: 'Antecedentes  no Penales', departamento: 'PAPELERIA', precio: 320.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'CFE', nombre: 'Recibo de luz', departamento: 'PAPELERIA', precio: 15.0, existencia: 19, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502276787577', nombre: 'lapiz de grafito triangular Shely Pieza', departamento: 'PAPELERIA', precio: 7.0, existencia: 8, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502276745966', nombre: 'Lapiz de grafito metalicos Pieza', departamento: 'PAPELERIA', precio: 7.0, existencia: 12, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7503002942963', nombre: 'Sacapunta Jocar surtido', departamento: 'PAPELERIA', precio: 3.0, existencia: 150, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7502276740893', nombre: 'Sacapunta Jocar con deposito y goma', departamento: 'PAPELERIA', precio: 15.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: '7500463937750', nombre: 'Libreta profesional de raya sazz 100 hojas', departamento: 'PAPELERIA', precio: 30.0, existencia: 5, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'COPIABN', nombre: 'Copia o Impresión B/N', departamento: 'PAPELERIA', precio: 2.0, existencia: 5000, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-    { id: 'COPICOLOR', nombre: 'COPIAS E IMPRECIO A COLOR', departamento: 'PAPELERIA', precio: 4.0, existencia: 500, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
-];
+            { id: '7506610212411', nombre: 'Cámara Wifi Robotizada Tipo Domo 3mp, VOLTECK', departamento: 'FERRETERIA', precio: 845.0, existencia: 2, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7506240621560', nombre: 'SENSOR DE MOVIMIENTO CON ALARMA Y TIMBRE VOLTECK', departamento: 'FERRETERIA', precio: 219.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C157816', nombre: 'Curp', departamento: 'FERRETERIA', precio: 10.0, existencia: 19, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7503026359532', nombre: 'Regulador de Voltaje Qian 1000VA Automático', departamento: 'TECNOLOGIA', precio: 430.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7500619016315', nombre: 'Lector de Código de Barras Tiaoma Alámbrico', departamento: 'TECNOLOGIA', precio: 430.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7500462624637', nombre: 'impresora termica de tickets 58mm', departamento: 'TECNOLOGIA', precio: 673.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '6973008800016', nombre: 'Dedales para telefono', departamento: 'TECNOLOGIA', precio: 25.0, existencia: 30, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502307717641', nombre: 'Marcador para pizarron varios colores DOBLE PUNTA', departamento: 'PAPELERIA', precio: 13.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '602760004580', nombre: 'CUADERNO PROFESIONAL  RAYA STAR KID ESTRELLA 100H', departamento: 'PAPELERIA', precio: 22.0, existencia: 36, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C159105', nombre: 'Lamina Alfabeto', departamento: 'PAPELERIA', precio: 50.0, existencia: 1, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502008431488', nombre: 'Silicon en barra  Devek delgada PIEZA', departamento: 'PAPELERIA', precio: 3.0, existencia: 98, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502307713377', nombre: 'Broche para archivo jumbo PIEZA', departamento: 'PAPELERIA', precio: 1.5, existencia: 100, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502005161234', nombre: 'Cúter Retráctil Grueso Uso Pesado con Guía', departamento: 'PAPELERIA', precio: 40.0, existencia: 10, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502005161210', nombre: 'Cúter Retráctil Delgado de Plástico para uso Ligero', departamento: 'PAPELERIA', precio: 11.0, existencia: 9, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7501214965398', nombre: 'Tijera Escolar Punta Roma Delta Mod. AL100', departamento: 'PAPELERIA', precio: 14.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7501987591732', nombre: 'Tijera escolar punta roma TIJ-ES001', departamento: 'PAPELERIA', precio: 15.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7501711437329', nombre: 'Crayones Escrimex Jumbo C/12 PZAS', departamento: 'PAPELERIA', precio: 25.0, existencia: 6, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C174000', nombre: 'Acta de nacimiento', departamento: 'PAPELERIA', precio: 100.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C191855', nombre: 'RFC', departamento: 'PAPELERIA', precio: 180.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C137770', nombre: 'Numero de Seguro Social', departamento: 'PAPELERIA', precio: 50.0, existencia: 19, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C163909', nombre: 'Constancia de no derecho inhabilitacion imss', departamento: 'PAPELERIA', precio: 140.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'D1C123966', nombre: 'Antecedentes  no Penales', departamento: 'PAPELERIA', precio: 320.0, existencia: 20, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'CFE', nombre: 'Recibo de luz', departamento: 'PAPELERIA', precio: 15.0, existencia: 19, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502276787577', nombre: 'lapiz de grafito triangular Shely Pieza', departamento: 'PAPELERIA', precio: 7.0, existencia: 8, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502276745966', nombre: 'Lapiz de grafito metalicos Pieza', departamento: 'PAPELERIA', precio: 7.0, existencia: 12, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7503002942963', nombre: 'Sacapunta Jocar surtido', departamento: 'PAPELERIA', precio: 3.0, existencia: 150, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7502276740893', nombre: 'Sacapunta Jocar con deposito y goma', departamento: 'PAPELERIA', precio: 15.0, existencia: 24, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: '7500463937750', nombre: 'Libreta profesional de raya sazz 100 hojas', departamento: 'PAPELERIA', precio: 30.0, existencia: 5, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'COPIABN', nombre: 'Copia o Impresión B/N', departamento: 'PAPELERIA', precio: 2.0, existencia: 5000, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' },
+            { id: 'COPICOLOR', nombre: 'COPIAS E IMPRECIO A COLOR', departamento: 'PAPELERIA', precio: 4.0, existencia: 500, imagen: 'https://placehold.co/400x300/3498db/white?text=Articulo' }
+        ];
 
         let carrito = [];
 
@@ -329,7 +330,6 @@
             contenedor.innerHTML = ""; 
             
             lista.forEach(producto => {
-                // Aquí determinamos si mostramos "Agotado" o las piezas disponibles
                 let textoExistencia = "";
                 if (producto.existencia > 0) {
                     textoExistencia = `<div style="font-size: 0.9rem; color: #27ae60; margin-bottom: 10px; font-weight: bold;">✅ Disponible: ${producto.existencia} pzas</div>`;
@@ -344,8 +344,8 @@
                     <h3 class="producto-titulo">${producto.nombre}</h3>
                     <div class="producto-precio">$${producto.precio.toFixed(2)} MXN</div>
                     ${textoExistencia}
-                    <button class="btn-agregar" onclick="agregarAlCarrito('${producto.id}')" ${producto.existencia === 0 ? 'disabled style="background-color:#95a5a6; cursor:not-allowed;"' : ''}>
-                        ${producto.existencia === 0 ? 'Sin stock' : 'Agregar al Carrito'}
+                    <button class="btn-agregar" onclick="agregarAlCarrito('${producto.id}')" ${producto.existencia <= 0 ? 'disabled style="background-color:#95a5a6; cursor:not-allowed;"' : ''}>
+                        ${producto.existencia <= 0 ? 'Sin stock' : 'Agregar al Carrito'}
                     </button>
                 </div>`;
                 contenedor.innerHTML += tarjeta;
@@ -365,7 +365,6 @@
             const producto = inventario.find(p => p.id === idProducto);
             const existe = carrito.find(p => p.id === idProducto);
             
-            // Candado para no vender más de lo que hay
             if (existe) {
                 if (existe.cantidad >= producto.existencia) {
                     alert(`¡Lo sentimos! Solo contamos con ${producto.existencia} piezas de este artículo.`);
@@ -442,10 +441,9 @@
                 return;
             }
 
-            // REEMPLAZA ESTE NÚMERO POR EL DE LA SUCURSAL
-            const telefono = "529620000000"; 
+            const telefono = "529620000000"; // RECUERDA PONER TU NÚMERO AQUÍ DESPUÉS
             
-            const metodoPago = document.getElementById("metodoPago").value;
+            const metodoPago = document.getElementById("metodoPago") ? document.getElementById("metodoPago").value : "No especificado";
             
             let mensaje = "¡Hola Papelería JHERLY! Quisiera hacer el siguiente pedido:\n\n";
             let total = 0;
@@ -463,6 +461,7 @@
             window.open(urlWhatsApp, "_blank");
         }
 
+        // Cargar productos al iniciar
         mostrarProductos(inventario);
     </script>
 </body>
