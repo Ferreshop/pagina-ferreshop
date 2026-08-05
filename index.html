@@ -322,7 +322,7 @@
                     <span class="producto-dept">${producto.departamento}</span>
                     <h3 class="producto-titulo">${producto.nombre}</h3>
                     <div class="producto-precio">$${producto.precio.toFixed(2)} MXN</div>
-                    <button class="btn-agregar" onclick="agregarAlCarrito(${producto.id})">Agregar al Carrito</button>
+                    <button class="btn-agregar" onclick="agregarAlCarrito('${producto.id}')">Agregar al Carrito</button>
                 </div>`;
                 contenedor.innerHTML += tarjeta;
             });
