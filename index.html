@@ -268,6 +268,18 @@
                 <span>Total:</span>
                 <span id="total-carrito">$0.00</span>
             </div>
+            
+            <!-- Aquí empieza el menú de métodos de pago -->
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label for="metodoPago" style="font-weight: bold; color: var(--color-principal);">Forma de pago:</label>
+                <select id="metodoPago" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                    <option value="Efectivo (Pago en sucursal)">💵 Efectivo (Pago en sucursal)</option>
+                    <option value="Transferencia / SPEI">📱 Transferencia / SPEI</option>
+                    <option value="Tarjeta de Crédito/Débito">💳 Tarjeta (Terminal en sucursal)</option>
+                </select>
+            </div>
+            <!-- Aquí termina -->
+
             <button class="btn-whatsapp" onclick="enviarPedidoWhatsApp()">Enviar Pedido por WhatsApp</button>
         </div>
     </div>
